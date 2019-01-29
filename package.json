@@ -7,6 +7,7 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "tsc",
+    "test:build": "tsc ./test/index.ts -m 'commonjs' -t 'es6'",
     "test": "node ./test/index.js"
   },
   "devDependencies": {
