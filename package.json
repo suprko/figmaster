@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:suprko/figmaster.git",
   "author": "Lucas Huang <hello@superko.org>",
-  "license": "GPL3.0"
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "tsc",
+    "test": "node ./test/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4"
+  }
 }
