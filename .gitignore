@@ -60,5 +60,8 @@ typings/
 # next.js build output
 .next
 
+# macs :facepalm:
+.DS_Store
+
 # secret things that you shouldn't commit to a public repo
 test/secrets.js
