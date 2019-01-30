@@ -25,7 +25,9 @@ function getFigmaRaw(token, fileId) {
                 data += chunk;
             });
             res.on("end", chunk => {
-                resolve(data);
+                // For some reason the response starts with "undefined"
+                // After that's stripped out, it can be parsed as regular JSON.
+                resolve(JSON.parse(data.replace("undefined", "")));
             });
         });
     });
