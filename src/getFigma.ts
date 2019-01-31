@@ -2,8 +2,6 @@ const https = require("https");
 const url = require("url");
 const baseUrl = "https://api.figma.com/v1/files/";
 
-// module.exports = function(token) {};
-
 /**
  * Returns a promise that resolves to the raw JSON from a Figma file.
  * Requires a Figma developer token and the ID of the file in question.
