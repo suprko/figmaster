@@ -1,5 +1,5 @@
-const https = require("https");
-const url = require("url");
+import https from "https";
+import url from "url";
 const baseUrl = "https://api.figma.com/v1/files/";
 
 /**
@@ -7,14 +7,14 @@ const baseUrl = "https://api.figma.com/v1/files/";
  * Requires a Figma developer token and the ID of the file in question.
  */
 export function getFigmaRaw(token: string, fileId: string) {
-  let request = url.parse(`${baseUrl}${fileId}`);
-  request.headers = {
+  let requestOptions = url.parse(`${baseUrl}${fileId}`) as https.RequestOptions;
+  requestOptions.headers = {
     "User-Agent": "request",
     "X-Figma-Token": token
   };
 
   return new Promise((resolve, reject) => {
-    https.get(request, res => {
+    https.get(requestOptions, res => {
       console.log("Status code: ", res.statusCode);
       console.log("Headers: ", res.headers);
 
@@ -22,11 +22,11 @@ export function getFigmaRaw(token: string, fileId: string) {
         reject(err);
       });
 
-      let data;
+      let data: string;
       res.on("data", chunk => {
         data += chunk;
       });
-      res.on("end", chunk => {
+      res.on("end", () => {
         // For some reason the response starts with "undefined"
         // After that's stripped out, it can be parsed as regular JSON.
         resolve(JSON.parse(data.replace("undefined", "")));
