@@ -1,2 +1,2 @@
-export { getFigmaRaw } from "./getFigma";
+export { saveFigmaJson } from "./commands";
 export { writeScss } from "./writeScss";

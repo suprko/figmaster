@@ -13,7 +13,7 @@ const baseUrl = "https://api.figma.com/v1/files/";
  * @param {string} fileId File ID from the file's Figma URL.
  * @returns Promise that resolves to the raw JSON from a Figma file.
  */
-function getFigmaRaw(token, fileId) {
+function getFigmaRawJson(token, fileId) {
     let requestOptions = url_1.default.parse(`${baseUrl}${fileId}`);
     requestOptions.headers = {
         "User-Agent": "request",
@@ -38,5 +38,5 @@ function getFigmaRaw(token, fileId) {
         });
     });
 }
-exports.getFigmaRaw = getFigmaRaw;
+exports.getFigmaRawJson = getFigmaRawJson;
 //# sourceMappingURL=getFigma.js.map

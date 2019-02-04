@@ -9,7 +9,7 @@ const baseUrl = "https://api.figma.com/v1/files/";
  * @param {string} fileId File ID from the file's Figma URL.
  * @returns Promise that resolves to the raw JSON from a Figma file.
  */
-export function getFigmaRaw(token: string, fileId: string) {
+export function getFigmaRawJson(token: string, fileId: string) {
   let requestOptions = url.parse(`${baseUrl}${fileId}`) as https.RequestOptions;
   requestOptions.headers = {
     "User-Agent": "request",
