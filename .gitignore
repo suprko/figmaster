@@ -63,5 +63,5 @@ typings/
 # macs :facepalm:
 .DS_Store
 
-# secret things that you shouldn't commit to a public repo
-test/secrets.js
+# secret Figmaster things that you shouldn't commit to a public repo
+.figmaster/token
