@@ -64,5 +64,4 @@ typings/
 .DS_Store
 
 # secret Figma things that you shouldn't commit to a public repo
-.figmaster/token
-.figmaster/figma.json
+.figmaster/
