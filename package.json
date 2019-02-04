@@ -6,12 +6,13 @@
   "author": "Lucas Huang <hello@superko.org>",
   "license": "GPL-3.0-or-later",
   "config": {
-    "figmasterPath": "dist"
+    "figmasterModulePath": "dist",
+    "figmasterSource": ".figmaster"
   },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
-    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterPath/commands/saveFigmaJson.js $(cat .figmaster/token) $(cat .figmaster/fileId)"
+    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterModulePath/commands/saveFigmaJson.js $(cat $npm_package_config_figmasterSource/token) $(cat $npm_package_config_figmasterSource/fileId)"
   },
   "devDependencies": {
     "@types/node": "^10.12.19",
