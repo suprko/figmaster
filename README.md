@@ -16,13 +16,13 @@ In `package.json`, you'll need to add some config stuff and scripts, which adds 
 
 ```
   "config": {
-    "figmasterModulePath": "node_modules/figmaster",
+    "figmasterModule": "node_modules/figmaster",
     "figmasterSource": ".figmaster"
   },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
-    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterModulePath/commands/saveFigmaJson.js $(cat $npm_package_config_figmasterSource/token) $(cat $npm_package_config_figmasterSource/fileId)"
+    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterModule/commands/saveFigmaJson.js $(cat $npm_package_config_figmasterSource/token) $(cat $npm_package_config_figmasterSource/fileId)"
   },
 
 ```
