@@ -29,7 +29,23 @@ In `package.json`, you'll need to add some config stuff and scripts, which adds 
 
 ## Status
 
+### Basic functionality
+
 - [x] fetch raw JSON from Figma
 - [x] save JSON into file
 - [ ] parse JSON to keep only the properties we want
-- [x] write JSON into SCSS object
+  - [ ] collab with designers on Figma doc structure
+
+### Sass variables
+
+- [x] write variables directly from JSON into SCSS (e.g. colors)
+- [ ] calculate paddings and margins from JSON
+
+### React components
+
+- [ ] parse groups into components directly?
+  - maybe too ambitious
+
+### Style-in-JS
+
+- [ ] we'll need to decide if we're going to take this route, and which one
