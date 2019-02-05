@@ -4,6 +4,6 @@ import { FigmaObject } from "./interfaces";
  * @param objects Array of objects with properties pulled from Figma.
  * @param folder Path to the folder you want to write.
  */
-export declare function writeScss(objects: {
+export declare function jsonToScss(objects: {
     [key: string]: FigmaObject;
 }, writeFolder: string): void;

@@ -1,1 +1,2 @@
-export { writeScss } from "./writeScss";
+export { getFigmaRawJson } from "./getFigma";
+export { jsonToScss } from "./jsonToScss";

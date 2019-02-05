@@ -9,7 +9,7 @@ const fs_1 = __importDefault(require("fs"));
  * @param objects Array of objects with properties pulled from Figma.
  * @param folder Path to the folder you want to write.
  */
-function writeScss(objects, writeFolder) {
+function jsonToScss(objects, writeFolder) {
     Object.keys(objects).forEach(key => {
         // Create empty SCSS file with this key's name (e.g. "colors.scss")
         let scss = fs_1.default.openSync(`${writeFolder}/${key}.scss`, "w");
@@ -27,5 +27,5 @@ function writeScss(objects, writeFolder) {
         }
     });
 }
-exports.writeScss = writeScss;
-//# sourceMappingURL=writeScss.js.map
+exports.jsonToScss = jsonToScss;
+//# sourceMappingURL=jsonToScss.js.map
