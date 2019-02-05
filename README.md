@@ -1,6 +1,6 @@
 # Figmaster
 
-**Current status: extremely WIP.** Not working yet. Everything is likely to change.
+**Current status: extremely WIP.** Not working yet. Everything is likely to change. Including this document.
 
 Use a Figma document as a source of truth in your design process. Convert Figma files to design tokens. Deploy to Sass and/or some kinds of styled-in-JS libraries...?
 
@@ -31,5 +31,5 @@ In `package.json`, you'll need to add some config stuff and scripts, which adds 
 
 - [x] fetch raw JSON from Figma
 - [x] save JSON into file
-- [] parse JSON to keep only the properties we want
+- [ ] parse JSON to keep only the properties we want
 - [x] write JSON into SCSS object
