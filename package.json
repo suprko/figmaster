@@ -7,12 +7,14 @@
   "license": "GPL-3.0-or-later",
   "config": {
     "figmasterModule": "dist",
-    "figmasterSource": ".figmaster"
+    "figmasterSource": ".figmaster",
+    "figmasterOutput": ".figmaster/output"
   },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist/",
-    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterModule/commands/saveFigmaJson.js $(cat $npm_package_config_figmasterSource/token) $(cat $npm_package_config_figmasterSource/fileId)"
+    "figmaster:saveFigmaJson": "node $npm_package_config_figmasterModule/commands/saveFigmaJson.js $(cat $npm_package_config_figmasterSource/token) $(cat $npm_package_config_figmasterSource/fileId)",
+    "figmaster:saveScss": "node $npm_package_config_figmasterModule/commands/saveScss.js $npm_package_config_figmasterSource/figma.json $npm_package_config_figmasterOutput"
   },
   "devDependencies": {
     "@types/node": "^10.12.19",
